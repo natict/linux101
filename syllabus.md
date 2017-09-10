@@ -43,23 +43,63 @@ Each unit is ~90 minutes
         5. mounts
     2. Basic commands
         1. cat, echo, head, tail, grep
-        2. man, --help
+        2. man \[-k\], --help
         3. locate, find
         4. reboot/shutdown
         5. ssh
     3. Environment variables (printing, setting, PATH)
     4. Process basics (stdin, stdout, stderr, exit code)
     5. File utilities (touch, mkdir, rm, mv, du)
-    6. I/O redirection (<, >, >>, 2>, 2>&1)
+    6. I/O redirection (<, >, >>, 2>, 2>&1, >/dev/null)
     7. Pipes (|)
-3. Packages, Services and Permissions
+3. Processes & Permissions ([exercise](exercises/proc_perm.md))
     1. Permissions
-        1. Users, groups
+        1. Users, groups (id, useradd, usermod, /etc/passwd, /etc/groups)
         2. Id vs name
-        3. Shadow
+        3. su, sudo
+            1. /etc/sudoers.conf
         4. File permissions
-        5. sudo
-    2. Package management
+            1. Ownership
+            2. Mode
+        5. Shadow
+    2. Processes & signals
+        1. Listing processes (ps, top)
+        2. Process information: pid, ppid, cmdline
+        4. Signals: why? sending (kill) & handling
+            1. SIGTERM (kill)
+            2. SIGINT (Ctrl+c)
+            3. SIGKILL (kill -9), and SIGSTOP (Ctrl+z)
+        3. Process states (simplified)
+            1. Un-interruptable sleep & Zombies
+        4. Scheduling with cron
+4. Bash 1 ([exercise](exercises/bash.md))
+    1. Builtins
+        1. alias, history, pushd/popd/dirs, which, read
+        2. test, \[ expr \]
+        3. Jobs: Ctrl+z, bg, fg, jobs, cmd &
+        4. help    
+    2. Writing scripts
+        1. Which shell will run the script? (#!)
+        2. Comments
+        3. (print-)Debugging scripts (bash -x)
+    3. Variables
+        1. Global vs local
+        2. String
+        3. Reserved
+        4. Quoting ('' vs "")
+    4. Command Substitution ($(cmd))
+5. Bash 2 ([exercise](exercises/bash.md))
+    1. Arithmetic Expression ($((arithmetic_exp)))
+    2. Conditional
+        1. if expr; then cmd; else cmd2; fi
+        2. using test (note spacing)
+        3. simple conditionals: &&, ||
+    3. Loops
+        1. for e in element1 element2 ...; do cmd; done
+        2. while expr; do cmd; done
+    4. Functions
+6. Packages & Services
+    1. Package management
         1. Why do we need packages?
         2. Package structure
             1. Meta, Scripts, Requires, Provides, Files
@@ -71,7 +111,7 @@ Each unit is ~90 minutes
             1. Install, update, erase
             2. List, info, makecache
             3. Package by file (whatprovides)
-    3. Services
+    2. Services
         1. Boot process
             1. BIOS, bootloader, kernel, initramfs, init
             2. rc.local
@@ -90,24 +130,23 @@ Each unit is ~90 minutes
             2. Tunneling
                 1. Built-in (scp, sftp)
                 2. Dynamic (e.g. -D)
-4. Bash 1
+7. Linux Metrics 1
     1. TODO
-5. Bash 2
+8. Linux Metrics 2
     1. TODO
-6. Linux Metrics 1
-    1. TODO
-7. Linux Metrics 2
-    1. TODO
-8. Networking
+9. Networking
     1. Viewing configuration
     2. Setting configuration
     3. Monitoring
     4. Sniffing
-9. Extras (for Ops)
+10. Extras (for Ops)
     1. Provisioning
         1. PXE boot
     2. Configuration management
     3. Automation
         1. mussh
         2. python fabric
-    4. ?
+    4. Docker containers
+        1. Why?
+        2. Into to containers
+        3. containers vs virtualization

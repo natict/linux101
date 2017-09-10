@@ -4,9 +4,9 @@
 2. Export a senseless path by entering, for instance, `export PATH=blah` and try listing directory content.
 3. Make a symbolic link in your home directory to `/var/tmp`. Check that it really works.
     1. Make another symbolic link in your home directory to this link. Check that it works. Remove the first link and list directory content. What happened to the second link?
-4. Find the number of files containing the word ‘include’
-    1. List the size of each file
-    2. Print the largest one
+4. Find the number of files in `/usr` containing the word ‘include’ (some files may match multiple times)
+    1. List the size of each file (see `man xargs`)
+    2. Print the largest one (see `man sort`)
 5. List the files in reverse alphabetical order.
 6. Where is the `bash` program located on your system?
     1. Use the `--version` option to find out which version you are running.
