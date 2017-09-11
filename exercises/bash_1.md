@@ -23,21 +23,6 @@ file "$DIRNAME"/* | fgrep "$FILETYPE" | tee $LOGFILE | wc -l
 
 exit 0
 ```
-5. Examine and explain the following script. For hints, you might refer to the manual for find and stat.
-```
-#!/bin/bash
-
-# Author:  Nathan Coulter
-# This code is released to the public domain.
-# The author gave permission to use this code snippet in the ABS Guide.
-
-find -maxdepth 1 -type f -printf '%f\000'  | {
-   while read -d $'\000'; do
-      mv "$REPLY" "$(date -d "$(stat -c '%y' "$REPLY") " '+%Y%m%d%H%M%S'
-      )-$REPLY"
-   done
-}
-
-# Warning: Test-drive this script in a "scratch" directory.
-# It will somehow affect all the files there.
-```
+5. Write a script that backs itself up, that is, copies itself to a file named backup.sh.
+    * Hint: Use the `cat` command and the appropriate *positional parameter*.
+6. Write a script that echoes itself to stdout, but backwards.

@@ -11,3 +11,4 @@
 * [Advanced Bash-Scripting Guide](http://tldp.org/LDP/abs/html/)
 * [Bash Guide for Beginners](http://www.tldp.org/LDP/Bash-Beginners-Guide/html/Bash-Beginners-Guide.html)
 * [Introduction to Linux](http://tldp.org/LDP/intro-linux/html/index.html)
+* [BASH Guide](http://mywiki.wooledge.org/BashGuide)

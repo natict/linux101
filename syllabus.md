@@ -51,7 +51,7 @@ Each unit is ~90 minutes
     4. Process basics (stdin, stdout, stderr, exit code)
     5. File utilities (touch, mkdir, rm, mv, du)
     6. I/O redirection (<, >, >>, 2>, 2>&1, >/dev/null)
-    7. Pipes (|)
+    7. Pipes (|) and one-liners (;)
 3. Processes & Permissions ([exercise](exercises/proc_perm.md))
     1. Permissions
         1. Users, groups (id, useradd, usermod, /etc/passwd, /etc/groups)
@@ -87,7 +87,7 @@ Each unit is ~90 minutes
         2. String
         3. Reserved
         4. Quoting ('' vs "")
-        5. Arguments ($#, $*)
+        5. Parameters ($0, $#, $*)
     4. Command Substitution ($(cmd))
 5. Bash 2 ([exercise](exercises/bash_2.md))
     1. Arithmetic Expression ($((arithmetic_exp)))
