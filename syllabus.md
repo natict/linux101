@@ -72,7 +72,7 @@ Each unit is ~90 minutes
         3. Process states (simplified)
             1. Un-interruptable sleep & Zombies
         4. Scheduling with cron
-4. Bash 1 ([exercise](exercises/bash.md))
+4. Bash 1 ([exercise](exercises/bash_1.md))
     1. Builtins
         1. alias, history, pushd/popd/dirs, which, read
         2. test, \[ expr \]
@@ -87,8 +87,9 @@ Each unit is ~90 minutes
         2. String
         3. Reserved
         4. Quoting ('' vs "")
+        5. Arguments ($#, $*)
     4. Command Substitution ($(cmd))
-5. Bash 2 ([exercise](exercises/bash.md))
+5. Bash 2 ([exercise](exercises/bash_2.md))
     1. Arithmetic Expression ($((arithmetic_exp)))
     2. Conditional
         1. if expr; then cmd; else cmd2; fi
@@ -130,16 +131,14 @@ Each unit is ~90 minutes
             2. Tunneling
                 1. Built-in (scp, sftp)
                 2. Dynamic (e.g. -D)
-7. Linux Metrics 1
+7. Linux Metrics
     1. TODO
-8. Linux Metrics 2
-    1. TODO
-9. Networking
+8. Networking
     1. Viewing configuration
     2. Setting configuration
     3. Monitoring
     4. Sniffing
-10. Extras (for Ops)
+9. Extras (for Ops)
     1. Provisioning
         1. PXE boot
     2. Configuration management
