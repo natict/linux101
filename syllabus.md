@@ -99,7 +99,51 @@ Each unit is ~90 minutes
         1. for e in element1 element2 ...; do cmd; done
         2. while expr; do cmd; done
     4. Functions
-6. Packages & Services
+6. Linux Metrics (and logs) ([exercise](exercises/metrics.md))
+    1. Intro
+        1. When/Why are we looking at metrics?
+            1. Capacity planning
+            2. During an incident
+            3. Incident postmortem
+            4. ?
+        2. How are we looking at metrics?
+            1. CLI
+            2. UI (e.g. netdata) 
+            3. Aggregation (e.g. graphite)
+    2. CPU
+        1. Percentage: user, system, nice, idle, IO-wait, stolen ticks
+        2. Load Average (load increase vs decrease, included process states)
+        3. Context Switches & Interrupts (vmstat)
+    3. Memory
+        1. Free, Buffers, Caches (not freeable objects)
+        2. Swap in/out
+    4. IO
+        1. Free space, inodes
+        2. Blocks in/out globally (vmstat), per device (iostat), per process (iotop)
+        3. Average queue size, wait
+    5. Networking
+        1. Traffic stats (iptraf)
+        2. Interface stats (ethtool -S)
+    6. Logs
+        1. Kernel (dmesg), System (syslog / messages) and Applications
+        2. Writing to log from scripts (logger)
+        3. Log rotation (logrotate)
+7. Networking ([exercise](exercises/network.md))
+    1. Intro
+        1. TCP/IP 5 layer model: Application, Transport, Network, Data, Physical
+        2. IP address, subnets & routing
+        3. Sockets, TCP vs UDP 
+    1. Viewing
+        1. Data: Interfaces (ip link, ethtool), ARP (arp -a)
+        2. Network: IP address (ip address), Routing table (ip route), Trace route (mtr) 
+        3. Transport: Show listening sockets (netstat/ss), Test connectivity (nc), Port scanning (nmap)
+        4. Application: HTTP (curl)
+    2. Setting configuration
+        1. IP configuration
+        2. DNS Resolver (nsswitch, resolv.conf)
+    3. Sniffing
+        1. tcpdump, tshark
+8. Packages & Services
     1. Package management
         1. Why do we need packages?
         2. Package structure
@@ -131,13 +175,6 @@ Each unit is ~90 minutes
             2. Tunneling
                 1. Built-in (scp, sftp)
                 2. Dynamic (e.g. -D)
-7. Linux Metrics
-    1. TODO
-8. Networking
-    1. Viewing configuration
-    2. Setting configuration
-    3. Monitoring
-    4. Sniffing
 9. Extras (for Ops)
     1. Provisioning
         1. PXE boot
