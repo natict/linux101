@@ -129,21 +129,22 @@ Each unit is ~90 minutes
         2. Writing to log from scripts (logger)
         3. Log rotation (logrotate)
 7. Networking ([exercise](exercises/network.md))
-    1. Intro
+    1. Recap
         1. TCP/IP 5 layer model: Application, Transport, Network, Data, Physical
         2. IP address, subnets & routing
         3. Sockets, TCP vs UDP 
-    1. Viewing
+    2. Viewing
         1. Data: Interfaces (ip link, ethtool), ARP (arp -a)
         2. Network: IP address (ip address), Routing table (ip route), Trace route (mtr) 
         3. Transport: Show listening sockets (netstat/ss), Test connectivity (nc), Port scanning (nmap)
         4. Application: HTTP (curl)
-    2. Setting configuration
+    3. Setting configuration
         1. IP configuration
         2. DNS Resolver (nsswitch, resolv.conf)
-    3. Sniffing
-        1. tcpdump, tshark
-8. Packages & Services
+    4. Sniffing
+        1. `tcpdump -vvv FILTER` (and why you should almost always use `-n`)
+        2. `tshark FILTER`
+8. Packages & Services ([exercise](exercises/packages_services.md))
     1. Package management
         1. Why do we need packages?
         2. Package structure
